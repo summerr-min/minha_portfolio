@@ -1,0 +1,525 @@
+/* =========================================
+  메인 슬라이드 (유지보수 최적화 버전)
+========================================= */
+.hero-banner {
+  width: 100%;
+  height: 100vh;
+}
+.swiper-slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper-slide .text-box {
+  position: absolute;
+  bottom: 60px;
+  left: 40px;
+  text-align: left;
+  color: #fff;
+  z-index: 10;
+}
+.swiper-slide .text-box h2 {
+  font-size: 20px;
+  margin: 0 0 10px;
+  font-weight: 400;
+  line-height: 160%;
+}
+.swiper-slide .text-box h3 {
+  font-size: 14px;
+  line-height: 170%;
+  margin: 0 0 12px;
+  font-weight: 400;
+}
+.swiper-slide .text-box a {
+  color: #ffffff;
+  margin: 0;
+  font-size: 12px;
+  text-decoration: underline;
+  line-height: 17px;
+  font-weight: 400;
+}
+
+/* =========================================
+  하단 상품 리스트 레이아웃 (Grid)
+========================================= */
+/* 컨텐츠 래퍼 및 그리드 설정 */
+.product-content-wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 60px; /* 위아래 섹션 간격 */
+  padding: 10px 10px;
+  margin-bottom: 50px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4개씩 정렬로 변경 */
+  gap: 20px;
+}
+
+/* 중간 배너 스타일 */
+.mobile-only {
+  display: none;
+}
+
+.middle-banner {
+  width: 100%;
+}
+.middle-banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* 상품 카드 및 호버 이미지/버튼 설정 */
+.product-item {
+  width: 100%;
+  max-width: 349px; /* 요청하신 이미지 최대 크기 */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.product-item .img-box {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 정사각형 비율 (필요에 따라 3/4 등으로 조절) */
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.product-item .img-box > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* 호버 시 기본 이미지는 숨기고 호버 이미지 표시 */
+.product-item .img-box .hover-img {
+  opacity: 0;
+}
+.product-item .img-box:hover .hover-img {
+  opacity: 1;
+}
+
+/* 찜하기(하트) 버튼 */
+.btn-like {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* 장바구니 담기 버튼 (기본적으로 숨겨짐) */
+.btn-cart {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ddd;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* 이미지 박스 호버 시 장바구니 버튼 슬라이드 업 */
+.product-item .img-box:hover .btn-cart {
+  transform: translateY(0);
+}
+
+/* 상품 정보 텍스트 스타일 */
+.info-box {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.info-box .desc {
+  color: #999;
+}
+.info-box .capacity {
+  margin-top: 15px;
+}
+
+/* 중간 배너박스 텍스트 */
+.swiper-slide .ban-box {
+  position: absolute;
+  left: 20px;
+  bottom: 35px;
+  z-index: 9;
+}
+.swiper-slide .ban-box h3 {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 0 0 13px;
+  color: #fff;
+}
+.swiper-slide .ban-box h2 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  margin: 0 0 8px;
+  color: #fff;
+}
+.swiper-slide .ban-box h3 {
+  font-size: 14px;
+  line-height: 170%;
+  margin: 0 0 12px;
+  font-weight: 400;
+}
+.swiper-slide .ban-box a {
+  color: #ffffff;
+  margin: 0;
+  font-size: 12px;
+  text-decoration: underline;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+/* =========================================
+  향수 추천 스플릿 슬라이더 (수정 완료)
+========================================= */
+.scent-slider-section {
+  width: 100%;
+  margin-bottom: 80px;
+}
+
+.scentSwiper {
+  width: 100%;
+}
+
+/* 핵심: display: flex로 좌우 50:50 정렬, 배경색 #FAFAFA 통일 */
+.split-slide {
+  display: flex;
+  width: 100%;
+  background-color: #fafafa;
+}
+
+/* 왼쪽 영역 */
+.left-half {
+  width: 50%;
+  position: relative;
+}
+.left-half img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+}
+.left-half .text-overlay {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  color: #ffffff;
+}
+.left-half .text-overlay h2 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+.left-half .text-overlay p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* 오른쪽 영역 */
+.right-half {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 0;
+}
+
+/* 상단 타이틀 및 화살표 영역 */
+.right-half .title-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px; /* 화살표와 글자 사이 간격 */
+  margin-bottom: 40px;
+}
+.right-half .title-text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 5px;
+  color: #000;
+}
+.right-half .title-text h3 {
+  font-size: 14px;
+  color: #333;
+  font-weight: normal;
+}
+
+/* 화살표 버튼 */
+.swiper-btn-prev,
+.swiper-btn-next {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* 향수 이미지 */
+.right-half .perfume-img {
+  width: 150px;
+  margin-bottom: 40px;
+}
+
+/* 제품 설명 영역 */
+.right-half .desc-area {
+  margin-bottom: 40px;
+  color: #333;
+}
+.right-half .desc-area h4 {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.6;
+}
+.right-half .desc-area h5 {
+  font-size: 12px;
+  color: #999;
+  margin: 25px 0 10px;
+  font-weight: normal;
+}
+
+/* 제품 보러가기 버튼 */
+.right-half .btn-more {
+  font-size: 13px;
+  color: #999;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/**/
+.lineup-wrapper {
+  position: relative;
+  width: 100%;
+  height: 740px;
+}
+.lineup-wrapper > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.lineup-wrapper .ban-box {
+  position: absolute;
+  bottom: 60px;
+  left: 40px; /* 왼쪽에서부터의 거리 */
+  z-index: 20;
+  color: #000;
+  font-family: "Pretendard", sans-serif;
+}
+.lineup-wrapper .ban-box h2 {
+  font-size: 20px;
+  margin: 0 0 10px;
+  font-weight: 400;
+}
+
+.lineup-wrapper .ban-box h3 {
+  font-size: 14px;
+  margin: 0 0 12px;
+  font-weight: 400;
+}
+
+.lineup-wrapper .ban-box a {
+  font-size: 12px;
+  margin: 0 0 12px;
+  text-decoration: underline;
+  line-height: 17px;
+  font-weight: 400;
+  color: #000;
+}
+/* =========================================
+  Footer (푸터) - 레이아웃 완벽 수정판
+========================================= */
+.footer {
+  width: 100%;
+  border-top: 1px solid #eee;
+  font-size: 13px;
+  color: #333;
+}
+
+/* 상단 4단 그리드 구역 */
+.footer-top {
+  padding: 0 10px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  /* gap, margin-bottom 삭제! (세로선이 끊기는 원인 제거) */
+}
+
+.footer-col {
+  border-right: 1px solid #eee;
+  padding: 20px 10px;
+  padding-bottom: 60px; /* 박스를 밑으로 60px 늘려서 세로선을 꽉 채움! */
+}
+
+/* 첫 번째 칸과 마지막 칸 다듬기 */
+
+.footer-col:last-child {
+  border-right: none; /* 마지막 칸은 오른쪽 세로선 불필요 */
+}
+
+/* 텍스트 디테일 */
+.footer-col h4 {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.footer-col p,
+.footer-col ul li {
+  color: #000;
+  line-height: 1.6;
+  list-style: none;
+}
+.footer-col p {
+  align-items: flex-start;
+  display: flex;
+  gap: 10px;
+}
+.footer-col p img {
+  margin-top: 2px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+/* 하단 회사 정보 */
+.footer-bottom {
+  padding: 30px 40px; /* 위아래 30px, 양옆 40px 안쪽 여백 */
+  border-top: 1px solid #eee; /* 바깥쪽 padding이 없어져서 끝까지 꽉 찹니다! */
+}
+
+.policy-links {
+  margin-bottom: 15px;
+  color: #999;
+}
+.policy-links a {
+  color: #999;
+}
+.policy-links strong {
+  color: #999;
+}
+
+.company-info {
+  font-style: normal;
+  color: #999;
+  line-height: 1.6;
+}
+@media (max-width: 1023px) {
+  /* 태블릿에서는 상품 3칸으로 변경 */
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =========================================
+  반응형 (모바일: 가로 767px 이하)
+========================================= */
+@media (max-width: 767px) {
+  /* 모바일에서는 상품 2칸으로 변경 */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* 모바일은 화면이 좁으니 상품 사이 간격도 살짝 줄여줍니다 */
+  }
+
+  .middle-banner .swiper-slide {
+    height: 100vh; /* 모바일에서는 화면을 꽉 채우게 높이 조절 (원하는 높이로 변경 가능) */
+  }
+
+  .middle-banner .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left center; /*  핵심: 왼쪽을 기준으로 꽉 채우기 (오른쪽은 잘림) */
+  }
+  /* =========================================
+    향수 추천 스플릿 슬라이더 모바일 최적화 (세로 배치)
+  ========================================= */
+  .split-slide {
+    flex-direction: column; /* 좌우 배치를 위아래 배치로 변경 */
+  }
+
+  /* 1. 왼쪽/오른쪽 구역 너비를 100%로 확장 */
+  .left-half,
+  .right-half {
+    width: 100%;
+  }
+
+  /* 2. 상단 배경 이미지 구역 (모바일 높이 및 텍스트 위치 조절) */
+  .left-half {
+    height: 400px; /* 이미지가 너무 길게 나오지 않도록 높이 고정 */
+  }
+
+  .left-half .text-overlay {
+    top: 50px;
+    left: 20px; /* 기존 100px은 모바일에서 잘리므로 20px로 당김 */
+  }
+
+  .left-half .text-overlay h2 {
+    font-size: 20px; /* 모바일 가독성을 위해 폰트 살짝 축소 */
+  }
+
+  /* 3. 하단 향수 정보 구역 (여백 조절) */
+  .right-half {
+    padding: 50px 20px; /* 위아래 50px, 양옆 20px로 여백 최적화 */
+  }
+  /* 1. PC용 스와이퍼 숨기기 */
+  .pc-only {
+    display: none;
+  }
+
+  /* 2. 숨겨뒀던 모바일용 스와이퍼 보여주기 */
+  .mobile-only {
+    display: block;
+  }
+
+  /* 모바일용 이미지 화면 꽉 차게 조절 */
+  .mobile-only .swiper-slide img {
+    width: 100%;
+    height: auto; /* 화면 너비에 맞춰 높이가 자동 조절됨 */
+    display: block; /* 이미지 하단 여백 제거 */
+  }
+  .mobile-only .swiper-slide .ban-box {
+    bottom: 20px;
+  }
+
+  .mobile-only.hero-banner {
+    height: auto;
+  }
+
+  .mobile-only .swiper-slide {
+    height: auto;
+  }
+}

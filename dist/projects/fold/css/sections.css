@@ -1,0 +1,721 @@
+/* ══════════════════════════════════════════════
+   css/sections.css — hero(상단배너) · funding
+   ══════════════════════════════════════════════ */
+main {
+  padding-top: var(--header-h);
+}
+section {
+  position: relative;
+}
+
+/* ── ① HERO ── */
+#hero {
+  /* vh = 뷰포트(브라우저 화면) 높이의 %. 100vh는 화면 전체 높이.
+     calc()로 "화면 전체 높이 - 헤더 높이"를 계산해서,
+     헤더에 가려지지 않는 나머지 영역을 꽉 채움 */
+  min-height: calc(100vh - var(--header-h));
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+  align-items: center;
+  width: 100%;
+}
+.hero-title {
+  /* 데스크탑 기본 크기 68px. 화면이 좁아지면(900px 이하)
+     아래쪽 모바일 미디어쿼리에서 38px로 줄어듦 */
+  font-size: 68px;
+  margin: 18px 0 22px;
+}
+.hero-title em {
+  font-style: normal;
+  color: var(--spring);
+}
+.hero-lead {
+  max-width: 34ch;
+  color: var(--moss);
+  font-size: 17px;
+}
+.spec-row {
+  display: flex;
+  gap: 0;
+  margin-top: 36px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.spec {
+  flex: 1;
+  padding: 18px 0;
+}
+.spec + .spec {
+  border-left: 1px solid var(--line);
+  padding-left: 20px;
+}
+.spec dt {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  color: var(--moss);
+  text-transform: uppercase;
+}
+.spec dd {
+  margin: 8px 0 0;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+/* 히어로 비주얼 — 배경 원 2개와 텀블러를 겹친 구성 */
+.hero-visual {
+  position: relative;
+  /* min() = 괄호 안 값들 중 더 작은 쪽을 선택.
+     "화면 높이의 72%"와 "620px" 중 더 작은 값을 사용 */
+  height: min(72vh, 620px);
+}
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.blob-1 {
+  inset: 2% 6% 12% 4%;
+  background: var(--spring);
+  opacity: 0.13;
+}
+.blob-2 {
+  width: 44%;
+  aspect-ratio: 1;
+  right: 2%;
+  top: 14%;
+  background: var(--lime);
+  opacity: 0.3;
+}
+.tumbler-wrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tumbler {
+  height: 88%;
+  width: auto;
+  overflow: visible;
+}
+.fold-hint {
+  position: absolute;
+  right: 0;
+  bottom: 6%;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--moss);
+  text-align: right;
+}
+
+/* SVG 파츠의 색상 */
+.tumbler .fill-body {
+  fill: var(--surface);
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+.tumbler .fill-metal {
+  fill: var(--ink);
+}
+.tumbler .fill-accent {
+  fill: var(--spring);
+}
+.tumbler .fill-lime {
+  fill: var(--lime);
+}
+
+/* ──  펀딩 현황 (시그니처) ── */
+#funding {
+  padding: 120px 0 140px;
+  border-top: 1px solid var(--line);
+}
+.funding-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.percent {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  /* 데스크탑 기본 크기 168px. 모바일 미디어쿼리에서 72px로 줄어듦 */
+  font-size: 168px;
+  line-height: 0.86;
+  letter-spacing: -0.05em;
+  color: var(--spring);
+}
+.percent.is-over {
+  color: var(--lime);
+}
+.funding-sub {
+  color: var(--moss);
+  font-size: 15px;
+  padding-bottom: 12px;
+}
+
+/* 게이지 = 텀블러 주름과 같은 조형 언어 */
+.gauge {
+  display: flex;
+  gap: 4px;
+  margin: 40px 0 12px;
+  height: 38px;
+}
+.gauge span {
+  flex: 1;
+  border-radius: 1px;
+  background: var(--line);
+  transform: scaleY(0.45);
+  transform-origin: bottom;
+  transition: background 0.25s;
+}
+.gauge span.on {
+  background: var(--spring);
+}
+.gauge.is-over span.on {
+  background: var(--lime);
+}
+.gauge-legend {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1;
+  color: var(--moss);
+}
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 64px;
+  border-top: 1px solid var(--line);
+}
+.stat {
+  padding: 28px 0 4px;
+}
+.stat + .stat {
+  border-left: 1px solid var(--line);
+  padding-left: 28px;
+}
+.stat dt {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--moss);
+}
+.stat dd {
+  margin: 14px 0 0;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  /* 데스크탑 기본 크기 46px. 모바일 미디어쿼리에서 30px로 줄어듦 */
+  font-size: 46px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+.stat dd small {
+  font-size: 0.42em;
+  font-weight: 500;
+  color: var(--moss);
+  margin-left: 6px;
+  letter-spacing: 0;
+}
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  /* calc(var(--cta-h) + 48px) = 하단 고정바 높이에 48px을 더한 값을
+     아래쪽 여백으로 사용 (콘텐츠가 고정바에 가려지지 않도록) */
+  padding: 56px 0 calc(var(--cta-h) + 48px);
+  color: var(--moss);
+  font-size: 13px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.footer-grid dt {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.footer-grid dd {
+  margin: 10px 0 0;
+  color: var(--ink);
+  font-size: 14px;
+}
+
+/* 주름 덩어리 : 아래를 기준으로 눌린다 */
+#pleats,
+#lid {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  transition: transform 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 접힌 상태 */
+.tumbler.is-folded #pleats {
+  transform: scaleY(0.28);
+}
+.tumbler.is-folded #lid {
+  transform: translateY(128px);
+}
+
+/* ── 반응형 ── */
+@media (max-width: 900px) {
+  :root {
+    --header-h: 56px;
+    --cta-h: 64px;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .hero-title {
+    font-size: 38px;
+  }
+  .hero-visual {
+    height: 46vh;
+    order: -1;
+  }
+  .site-nav {
+    display: none;
+  }
+  .stat-row {
+    grid-template-columns: 1fr;
+  }
+  .stat + .stat {
+    border-left: none;
+    border-top: 1px solid var(--line);
+    padding-left: 0;
+  }
+  .stat dd {
+    font-size: 30px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .percent {
+    font-size: 72px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* ── ③ 제품 상세 : pin 구간 ── */
+#detail {
+  position: relative;
+  min-height: 340vh; /* 스텝 3개 + 여유 40vh */
+  border-top: 1px solid var(--line);
+}
+
+/* 화면에 붙어 있는 무대 */
+.detail-sticky {
+  position: sticky;
+  top: var(--header-h);
+  /* 히어로와 같은 방식: 화면 전체 높이 - 헤더 높이 */
+  height: calc(100vh - var(--header-h));
+  display: flex;
+  align-items: center;
+}
+
+.detail-stage {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+/* ── 왼쪽 : 텀블러 SVG ── */
+.stage-visual {
+  position: relative;
+  /* 히어로 비주얼과 같은 방식: 화면 높이의 62%와 560px 중 더 작은 값 */
+  height: min(62vh, 560px);
+  display: flex;
+  justify-content: center;
+}
+.stage-visual svg {
+  height: 100%;
+  width: auto;
+  overflow: visible;
+}
+
+/* 파츠 3개 — 전부 같은 규칙으로 움직인다 */
+#d-lid,
+#d-pleats,
+#d-base,
+#d-dims,
+#d-pocket {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  transition:
+    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.5s;
+}
+.d-body {
+  fill: var(--surface);
+  stroke: var(--ink);
+  stroke-width: 2;
+}
+.d-metal {
+  fill: var(--ink);
+}
+.d-accent {
+  fill: var(--product);
+} /* 스와치로 바뀌는 색 */
+#d-dims {
+  opacity: 0;
+}
+#d-dims line {
+  stroke: var(--moss);
+  stroke-width: 1.2;
+}
+#d-dims text {
+  fill: var(--moss);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 9px;
+}
+#d-pocket {
+  opacity: 0;
+  fill: none;
+  stroke: var(--moss);
+  stroke-width: 2;
+  stroke-dasharray: 6 5;
+}
+
+/* ★ 스텝별 모습 — 이 4줄이 애니메이션 전부입니다 */
+[data-step="1"] #d-lid {
+  transform: translateY(-46px);
+}
+[data-step="1"] #d-base {
+  transform: translateY(46px);
+}
+
+[data-step="2"] #d-pleats {
+  transform: scaleY(0.28);
+}
+[data-step="2"] #d-lid {
+  transform: translateY(128px);
+}
+[data-step="2"] #d-pocket {
+  opacity: 1;
+}
+
+[data-step="3"] #d-dims {
+  opacity: 1;
+}
+
+/* ── 오른쪽 : 설명 패널 ── */
+.stage-copy {
+  position: relative;
+  min-height: 340px;
+}
+.panel {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateY(16px);
+  pointer-events: none;
+  transition:
+    opacity 0.45s,
+    transform 0.45s;
+}
+[data-step="1"] .panel-1,
+[data-step="2"] .panel-2,
+[data-step="3"] .panel-3 {
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+.panel h3 {
+  font-size: 30px;
+  margin: 12px 0 18px;
+}
+.panel p {
+  color: var(--moss);
+  max-width: 38ch;
+}
+
+.part-list {
+  list-style: none;
+  margin: 26px 0 0;
+  padding: 0;
+}
+.part-list li {
+  display: flex;
+  gap: 14px;
+  align-items: baseline;
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+}
+.part-list b {
+  min-width: 76px;
+  font-size: 15px;
+}
+.part-list span {
+  color: var(--moss);
+  font-size: 14px;
+}
+.part-list em {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1;
+  font-style: normal;
+  color: var(--product);
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.size-compare {
+  display: flex;
+  align-items: flex-end;
+  gap: 28px;
+  margin-top: 30px;
+}
+.size-compare div {
+  text-align: center;
+}
+.size-bar {
+  width: 56px;
+  background: var(--product);
+  border-radius: 3px;
+}
+.size-bar.open {
+  height: 150px;
+}
+.size-bar.fold {
+  height: 38px;
+  background: var(--lime);
+}
+.size-compare p {
+  margin: 10px 0 0;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1;
+  color: var(--ink);
+}
+
+.dim-table {
+  margin: 26px 0 0;
+  border-top: 1px solid var(--line);
+}
+.dim-table div {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+}
+.dim-table dt {
+  color: var(--moss);
+  font-size: 14px;
+}
+.dim-table dd {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* 스텝 표시기 */
+.step-dots {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.step-dots i {
+  width: 22px;
+  height: 3px;
+  background: var(--line);
+  border-radius: 2px;
+  transition: background 0.3s;
+}
+[data-step="1"] .step-dots i:nth-child(1),
+[data-step="2"] .step-dots i:nth-child(-n + 2),
+[data-step="3"] .step-dots i {
+  background: var(--product);
+}
+
+/* ── 색상 스와치 (pin 밖) ── */
+#colors {
+  padding: 110px 0;
+  border-top: 1px solid var(--line);
+}
+.swatch-row {
+  display: flex;
+  gap: 14px;
+  margin-top: 24px;
+}
+.swatch {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid var(--line);
+  padding: 0;
+}
+.swatch[aria-pressed="true"] {
+  border-color: var(--ink);
+  transform: scale(1.08);
+}
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  margin-top: 64px;
+  background: var(--line);
+}
+.spec-grid div {
+  background: var(--paper);
+  padding: 24px 20px;
+}
+.spec-grid dt {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  color: var(--moss);
+  text-transform: uppercase;
+}
+.spec-grid dd {
+  margin: 12px 0 0;
+  font-size: 15px;
+}
+
+/* ── 모바일 : pin 해제, 3스텝 전부 펼쳐 보여주기 ── */
+@media (max-width: 900px) {
+  :root {
+    --header-h: 56px;
+  }
+  #detail {
+    min-height: auto;
+    padding: 70px 0;
+  }
+  .detail-sticky {
+    position: static;
+    height: auto;
+  }
+  .detail-stage {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .stage-visual {
+    height: 44vh;
+  }
+  .stage-copy {
+    min-height: 0;
+  }
+  .panel {
+    position: static;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    margin-bottom: 44px;
+  }
+  .step-dots {
+    display: none;
+  }
+  .spec-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+
+/* ── 스토리 ── */
+#story {
+  padding: 120px 0;
+  border-top: 1px solid var(--line);
+}
+
+.story-title {
+  /* 데스크탑 기본 크기 34px. 모바일 미디어쿼리에서 28px로 줄어듦 */
+  font-size: 34px;
+  margin: 16px 0 32px;
+}
+
+.story-content {
+  max-width: 600px;
+  color: var(--moss);
+  font-size: 17px;
+  line-height: 1.8;
+}
+
+.story-content p {
+  margin: 0 0 24px;
+}
+
+.story-content p.mb-large {
+  margin-bottom: 48px;
+}
+
+.story-content blockquote {
+  margin: 0 0 32px;
+  padding-left: 20px;
+  border-left: 3px solid var(--spring);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.story-content h3 {
+  color: var(--ink);
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.story-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.story-features li {
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.story-features strong {
+  display: block;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+/* ── 모바일 반응형 ── */
+@media (max-width: 900px) {
+  #story {
+    padding: 70px 0;
+  }
+  .story-title {
+    font-size: 28px;
+  }
+}

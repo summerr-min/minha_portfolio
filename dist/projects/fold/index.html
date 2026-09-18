@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FOLD — 접히는 실리콘 텀블러</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a class="logo" href="#hero">FOLD</a>
+        <nav class="site-nav">
+          <a href="#funding">펀딩 현황</a>
+          <a href="#detail">제품</a>
+          <a href="#story">스토리</a>
+          <a href="#colors">색상</a>
+        </nav>
+        <button class="theme-toggle" aria-label="테마 변경">◐</button>
+      </div>
+      <div class="progress-bar"></div>
+    </header>
+
+    <main>
+      <!-- ① HERO -->
+      <section id="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <p class="eyebrow">Reusable · 350ml</p>
+              <h1 class="hero-title">
+                가방에서<br />자리를 차지하지 않는<br /><em>텀블러</em>
+              </h1>
+              <p class="hero-lead">
+                다 마시면 45mm로 접힙니다. 식품용 실리콘 본체와 스테인리스 하단,
+                두 가지 소재만 씁니다.
+              </p>
+
+              <dl class="spec-row">
+                <div class="spec">
+                  <dt>용량</dt>
+                  <dd>350<small>ml</small></dd>
+                </div>
+                <div class="spec">
+                  <dt>무게</dt>
+                  <dd>98<small>g</small></dd>
+                </div>
+                <div class="spec">
+                  <dt>접은 높이</dt>
+                  <dd>45<small>mm</small></dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="hero-visual">
+              <div class="blob blob-1"></div>
+              <div class="blob blob-2"></div>
+
+              <div class="tumbler-wrap">
+                <svg
+                  class="tumbler"
+                  viewBox="0 0 140 300"
+                  xmlns="http://www.w3.org/2000/svg"
+                  role="img"
+                  aria-label="접히는 텀블러 일러스트"
+                >
+                  <!-- 뚜껑 -->
+                  <g id="lid">
+                    <rect
+                      class="fill-accent"
+                      x="34"
+                      y="16"
+                      width="72"
+                      height="20"
+                      rx="4"
+                    />
+                    <rect
+                      class="fill-body"
+                      x="30"
+                      y="34"
+                      width="80"
+                      height="16"
+                      rx="3"
+                    />
+                    <rect
+                      class="fill-lime"
+                      x="78"
+                      y="20"
+                      width="22"
+                      height="12"
+                      rx="2"
+                    />
+                  </g>
+                  <!-- 실리콘 본체 : 주름 8개 개별 요소 -->
+                  <g id="pleats">
+                    <rect
+                      class="fill-body"
+                      x="26"
+                      y="54"
+                      width="88"
+                      height="20"
+                      rx="3"
+                    />
+                    <rect
+                      class="fill-body"
+                      x="26"
+                      y="76"
+                      width="88"
+                      height="20"
+                      rx="3"
+                    />
+                    <rect
+                      class="fill-body"
+                      x="26"
+                      y="98"
+                      width="88"
+                      height="20"
+                      rx="3"
+                    />
+                    <rect
+                      class="fill-body"
+                      x="26"
+                      y="120"
+                      width="88"
+                      height="20"
+                      rx="3"
+                    />
+                    <rect
+                      class="fill-body"
+                      x="26"
+                      y="142"
+                      width="88"
+                      height="20"
+                      rx="3"
+                    />
+                    <rect
+                      class="fill-body"
+                      x="26"
+                      y="164"
+                      width="88"
+                      height="20"
+                      rx="3"
+                    />
+                    <rect
+                      class="fill-body"
+                      x="26"
+                      y="186"
+                      width="88"
+                      height="20"
+                      rx="3"
+                    />
+                    <rect
+                      class="fill-body"
+                      x="26"
+                      y="208"
+                      width="88"
+                      height="20"
+                      rx="3"
+                    />
+                  </g>
+                  <!-- 스테인리스 하단 -->
+                  <g id="base">
+                    <rect
+                      class="fill-metal"
+                      x="30"
+                      y="232"
+                      width="80"
+                      height="42"
+                      rx="6"
+                    />
+                    <rect
+                      class="fill-accent"
+                      x="38"
+                      y="248"
+                      width="30"
+                      height="5"
+                      rx="2.5"
+                    />
+                  </g>
+                </svg>
+              </div>
+
+              <p class="fold-hint">스크롤하면 접힙니다 ↓</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ② 펀딩 현황 -->
+      <section id="funding">
+        <div class="container">
+          <p class="eyebrow">Funding status · D-12</p>
+
+          <div class="funding-head">
+            <strong class="percent" id="percent">0%</strong>
+            <p class="funding-sub">
+              목표 5,000,000원 중 <span class="num" id="amount">0</span>원 모임
+            </p>
+          </div>
+
+          <div class="gauge" id="gauge" aria-hidden="true"></div>
+          <div class="gauge-legend"><span>0%</span><span>목표 100%</span></div>
+
+          <dl class="stat-row">
+            <div class="stat">
+              <dt>후원자</dt>
+              <dd><span class="num" id="backers">0</span><small>명</small></dd>
+            </div>
+            <div class="stat">
+              <dt>1인 평균</dt>
+              <dd><span class="num" id="avg">0</span><small>원</small></dd>
+            </div>
+            <div class="stat">
+              <dt>남은 기간</dt>
+              <dd>D-<span class="num">12</span></dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ③ 제품 상세 -->
+      <section id="detail">
+        <div class="detail-sticky">
+          <div class="container">
+            <div class="detail-stage" data-step="1">
+              <!-- 왼쪽 : 텀블러 -->
+              <div class="stage-visual">
+                <svg
+                  viewBox="0 0 190 300"
+                  role="img"
+                  aria-label="텀블러 구조와 치수"
+                >
+                  <!-- 가방 포켓 실루엣 (스텝 2에서만 등장) -->
+                  <rect
+                    id="d-pocket"
+                    x="16"
+                    y="196"
+                    width="108"
+                    height="86"
+                    rx="8"
+                  />
+
+                  <g id="d-lid">
+                    <rect
+                      class="d-accent"
+                      x="34"
+                      y="16"
+                      width="72"
+                      height="20"
+                      rx="4"
+                    />
+                    <rect
+                      class="d-body"
+                      x="30"
+                      y="34"
+                      width="80"
+                      height="16"
+                      rx="3"
+                    />
+                  </g>
+
+                  <g id="d-pleats">
+                    <rect
+                      class="d-body"
+                      x="26"
+                      y="54"
+                      width="88"
+                      height="20"
+                      rx="3"
+                    />
+                    <rect
+                      class="d-body"
+                      x="26"
+                      y="76"
+                      width="88"
+                      height="20"
+                      rx="3"
+                    />
+                    <rect
+                      class="d-body"
+                      x="26"
+                      y="98"
+                      width="88"
+                      height="20"
+                      rx="3"
+                    />
+                    <rect
+                      class="d-body"
+                      x="26"
+                      y="120"
+                      width="88"
+                      height="20"
+                      rx="3"
+                    />
+                    <rect
+                      class="d-body"
+                      x="26"
+                      y="142"
+                      width="88"
+                      height="20"
+                      rx="3"
+                    />
+                    <rect
+                      class="d-body"
+                      x="26"
+                      y="164"
+                      width="88"
+                      height="20"
+                      rx="3"
+                    />
+                    <rect
+                      class="d-body"
+                      x="26"
+                      y="186"
+                      width="88"
+                      height="20"
+                      rx="3"
+                    />
+                    <rect
+                      class="d-body"
+                      x="26"
+                      y="208"
+                      width="88"
+                      height="20"
+                      rx="3"
+                    />
+                  </g>
+
+                  <g id="d-base">
+                    <rect
+                      class="d-metal"
+                      x="30"
+                      y="232"
+                      width="80"
+                      height="42"
+                      rx="6"
+                    />
+                    <rect
+                      class="d-accent"
+                      x="38"
+                      y="248"
+                      width="30"
+                      height="5"
+                      rx="2.5"
+                    />
+                  </g>
+
+                  <!-- 치수선 (스텝 3에서만 등장) -->
+                  <g id="d-dims">
+                    <line x1="132" y1="16" x2="132" y2="274" />
+                    <line x1="126" y1="16" x2="138" y2="16" />
+                    <line x1="126" y1="274" x2="138" y2="274" />
+                    <text x="142" y="150">180mm</text>
+                    <line x1="26" y1="288" x2="114" y2="288" />
+                    <line x1="26" y1="282" x2="26" y2="294" />
+                    <line x1="114" y1="282" x2="114" y2="294" />
+                    <text x="46" y="300">88mm</text>
+                  </g>
+                </svg>
+              </div>
+
+              <!-- 오른쪽 : 설명 3장 -->
+              <div class="stage-copy">
+                <div class="panel panel-1">
+                  <div class="step-dots"><i></i><i></i><i></i></div>
+                  <p class="eyebrow">Structure</p>
+                  <h3>두 가지 소재,<br />세 개의 파츠</h3>
+                  <p>
+                    부품을 줄이면 물이 샐 곳도 줄어듭니다. 접착제 없이 끼워
+                    조립합니다.
+                  </p>
+                  <ul class="part-list">
+                    <li>
+                      <b>뚜껑</b><span>실리콘 밸브 + PP 잠금</span
+                      ><em>분리 세척</em>
+                    </li>
+                    <li>
+                      <b>본체</b><span>식품용 실리콘 · 주름 8단</span
+                      ><em>내열 120℃</em>
+                    </li>
+                    <li>
+                      <b>하단</b><span>스테인리스 304</span><em>98g 중 41g</em>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="panel panel-2">
+                  <div class="step-dots"><i></i><i></i><i></i></div>
+                  <p class="eyebrow">Volume</p>
+                  <h3>180mm가<br />45mm가 됩니다</h3>
+                  <p>
+                    다 마시면 손바닥에 들어옵니다. 백팩 사이드 포켓에 눕혀서
+                    넣는 높이입니다.
+                  </p>
+                  <div class="size-compare">
+                    <div>
+                      <div class="size-bar open"></div>
+                      <p>180mm</p>
+                    </div>
+                    <div>
+                      <div class="size-bar fold"></div>
+                      <p>45mm</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="panel panel-3">
+                  <div class="step-dots"><i></i><i></i><i></i></div>
+                  <p class="eyebrow">Dimensions</p>
+                  <h3>치수</h3>
+                  <dl class="dim-table">
+                    <div>
+                      <dt>용량</dt>
+                      <dd>350ml</dd>
+                    </div>
+                    <div>
+                      <dt>지름</dt>
+                      <dd>88mm</dd>
+                    </div>
+                    <div>
+                      <dt>펼친 높이</dt>
+                      <dd>180mm</dd>
+                    </div>
+                    <div>
+                      <dt>접은 높이</dt>
+                      <dd>45mm</dd>
+                    </div>
+                    <div>
+                      <dt>무게</dt>
+                      <dd>98g</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 색상 스와치 + 소재 정보 -->
+      <section id="colors">
+        <div class="container">
+          <p class="eyebrow">Colors</p>
+          <h2 style="font-size: 30px; margin: 12px 0 0">색상 3종</h2>
+          <div class="swatch-row">
+            <button
+              class="swatch"
+              data-color="#35C74F"
+              aria-pressed="true"
+              aria-label="스프링 그린"
+              style="background: #35c74f"
+            ></button>
+            <button
+              class="swatch"
+              data-color="#C9F04C"
+              aria-pressed="false"
+              aria-label="라임"
+              style="background: #c9f04c"
+            ></button>
+            <button
+              class="swatch"
+              data-color="#5B7F6A"
+              aria-pressed="false"
+              aria-label="세이지"
+              style="background: #5b7f6a"
+            ></button>
+          </div>
+
+          <dl class="spec-grid">
+            <div>
+              <dt>소재</dt>
+              <dd>식품용 실리콘 · STS304</dd>
+            </div>
+            <div>
+              <dt>인증</dt>
+              <dd>BPA-free · KC</dd>
+            </div>
+            <div>
+              <dt>내열</dt>
+              <dd>-20℃ ~ 120℃</dd>
+            </div>
+            <div>
+              <dt>세척</dt>
+              <dd>식기세척기 사용 가능</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+      <!-- ④ 스토리 -->
+      <section id="story">
+        <div class="container">
+          <p class="eyebrow">Brand Story</p>
+          <h2 class="story-title">짐이 되지 않는 착한 습관, FOLD</h2>
+
+          <div class="story-content">
+            <p>
+              환경을 위해 텀블러를 챙겨 나섰지만, 다 마신 후 빈 통이 가방에서
+              공간만 차지해 번거로우셨던 적 없으신가요? FOLD는 이런 일상 속 작은
+              불편함에서 출발했습니다.
+            </p>
+
+            <blockquote>"다 마시면 가볍게 접어서 주머니에 쏙!"</blockquote>
+
+            <p class="mb-large">
+              음료를 다 마신 후 180mm의 텀블러가 45mm로 납작하게 접힙니다. 백팩
+              사이드 포켓에 눕혀서 들어갈 만큼 작아지기 때문에 다 마신 후에도
+              절대 짐이 되지 않습니다.
+            </p>
+
+            <h3>FOLD가 특별한 3가지 이유</h3>
+            <ul class="story-features">
+              <li>
+                <strong>초경량 98g의 휴대성</strong>
+                350ml의 용량을 담지만 무게는 단 98g. 매일 들고 다녀도 부담이
+                없습니다.
+              </li>
+              <li>
+                <strong>안심할 수 있는 소재</strong>
+                식품용 실리콘과 스테인리스 304 소재를 사용했습니다. BPA-free
+                인증은 물론, -20℃~120℃ 내열성으로 뜨거운 음료도 거뜬합니다.
+              </li>
+              <li>
+                <strong>완벽한 3단 분리 세척</strong>
+                접착제 없이 조립된 3개의 파츠를 모두 분리해 식기세척기에서 속
+                시원하게 세척할 수 있습니다.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="cta-bar">
+      <div class="container">
+        <p class="status"><b>143% 달성</b> · 231명 참여 · D-12</p>
+        <button class="btn">후원하기</button>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <dl class="footer-grid">
+          <div>
+            <dt>창작자</dt>
+            <dd>FOLD · 대표 김OO</dd>
+          </div>
+          <div>
+            <dt>배송 예정</dt>
+            <dd>2026.10 순차 발송</dd>
+          </div>
+          <div>
+            <dt>문의</dt>
+            <dd>hello@fold.example</dd>
+          </div>
+        </dl>
+      </div>
+    </footer>
+
+    <!-- GSAP 본체와 스크롤 플러그인을 먼저 불러온 뒤 프로젝트 JS를 실행합니다. -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <!-- scroll.js에서 ScrollTrigger를 등록하므로 가장 먼저 실행합니다. -->
+    <script src="js/scroll.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/funding.js"></script>
+    <script src="js/detail.js"></script>
+  </body>
+</html>

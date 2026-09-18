@@ -1,0 +1,79 @@
+:root {
+  /* 팔레트 5색 */
+  --paper: #edf2e6; /* 배경 — 초록빛 도는 종이 */
+  --ink: #16241a; /* 텍스트 — 검정 아님, 짙은 초록 */
+  --spring: #35c74f; /* 밝은 그린 (메인) */
+  --lime: #c9f04c; /* 형광 라임 (강조·초과달성) */
+  --product: var(--spring); /* 색상 버튼으로 바뀌는 제품의 현재 색 */
+  --moss: #6e7a63; /* 라벨 · 보조 텍스트 */
+  --line: rgba(22, 36, 26, 0.14);
+  --surface: #f6f9f2; /* 카드 면 */
+
+  --header-h: 64px;
+  --cta-h: 72px;
+  --container: 1120px;
+
+  --font-body: "Pretendard Variable", Pretendard, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+[data-theme="dark"] {
+  --paper: #0e140f;
+  --ink: #e9f0e3;
+  --moss: #8b9682;
+  --line: rgba(233, 240, 227, 0.16);
+  --surface: #151d17;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.65; /* 글자 크기(16px)의 1.65배 ≈ 26.4px */
+  -webkit-font-smoothing: antialiased;
+  transition:
+    background 0.35s,
+    color 0.35s;
+}
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+}
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* 유틸리티 서체 — 라벨·수치는 전부 mono */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1; /* 글자 크기와 동일 = 11px */
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--moss);
+}
+.num {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid var(--spring);
+  outline-offset: 3px;
+}
