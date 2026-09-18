@@ -748,24 +748,23 @@ ul {
 }
 
 .github-button {
-  display: flex;
-  width: 100%;
-  min-height: clamp(130px, 17vw, 220px);
-  margin-top: 32px;
-  padding: 0 clamp(28px, 5vw, 72px);
+  display: inline-flex;
+  min-height: 48px;
+  margin-top: 24px;
+  padding: 0 20px;
   align-items: center;
-  justify-content: space-between;
-  border: 2px solid rgba(255, 255, 255, 0.7);
+  gap: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
   border-radius: 999px;
   color: var(--white);
-  font-size: clamp(3.4rem, 8vw, 8rem);
-  font-weight: 950;
-  letter-spacing: -0.08em;
+  font-size: 0.82rem;
+  font-weight: 850;
+  letter-spacing: 0.1em;
   line-height: 1;
 }
 
 .github-button > span:last-child {
-  font-size: 0.55em;
+  font-size: 1rem;
 }
 
 .footer-bottom {
@@ -1107,9 +1106,9 @@ ul {
   }
 
   .github-button {
-    min-height: 104px;
-    padding: 0 24px;
-    font-size: clamp(2.8rem, 15vw, 5rem);
+    min-height: 46px;
+    padding: 0 18px;
+    font-size: 0.78rem;
   }
 
   .footer-bottom {
