@@ -747,13 +747,25 @@ ul {
   color: var(--lime);
 }
 
-.site-footer h2 {
-  max-width: 980px;
-  margin-top: 26px;
-  font-size: clamp(3.5rem, 8.7vw, 9rem);
+.github-button {
+  display: flex;
+  width: 100%;
+  min-height: clamp(130px, 17vw, 220px);
+  margin-top: 32px;
+  padding: 0 clamp(28px, 5vw, 72px);
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 999px;
+  color: var(--white);
+  font-size: clamp(3.4rem, 8vw, 8rem);
   font-weight: 950;
   letter-spacing: -0.08em;
-  line-height: 0.9;
+  line-height: 1;
+}
+
+.github-button > span:last-child {
+  font-size: 0.55em;
 }
 
 .footer-bottom {
@@ -1094,8 +1106,10 @@ ul {
     margin-bottom: 30px;
   }
 
-  .site-footer h2 {
-    font-size: clamp(3.5rem, 17vw, 6rem);
+  .github-button {
+    min-height: 104px;
+    padding: 0 24px;
+    font-size: clamp(2.8rem, 15vw, 5rem);
   }
 
   .footer-bottom {
@@ -1115,4 +1129,14 @@ ul {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+.footer-email-small {
+  display: inline-block;
+  margin-top: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.72);
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  font-weight: 650;
+  letter-spacing: 0.02em;
 }
