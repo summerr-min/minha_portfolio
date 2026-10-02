@@ -1,4 +1,8 @@
 .sites-runtime/
+.site-package-stage*/
+.sites-clean*/
 qa-desktop.png
 qa-mobile.png
 site-package.zip
+*.tar
+*.tar.gz
