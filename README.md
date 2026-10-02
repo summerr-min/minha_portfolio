@@ -3,7 +3,7 @@
 HTML, CSS, JavaScript로 제작한 세 가지 반응형 웹 프로젝트를 소개하는
 웹 퍼블리셔 포트폴리오입니다.
 
-**포트폴리오 바로가기:** 배포 후 링크 추가 예정
+**[포트폴리오 바로가기](https://summerr-min.github.io/minha_portfolio/dist/)**
 
 ## Skills
 
@@ -30,7 +30,7 @@ HTML, CSS, JavaScript로 제작한 세 가지 반응형 웹 프로젝트를 소�
 
 ### 3. NONFICTION UI
 
-기존 사이트를 분석하고 재해석한 반응형 클론 프로젝트입니다.
+기존 이커머스 사이트의 구조와 주요 기능을 분석해 구현한 반응형 클론 프로젝트입니다.
 
 - 메가 메뉴 및 상품 슬라이더 구현
 - [프로젝트 보기](https://summerr-min.github.io/nonfiction_portfolio/)
