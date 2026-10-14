@@ -205,21 +205,79 @@
             <p class="project-type">PRODUCT LANDING · INTERACTION</p>
             <h3>FOLD</h3>
             <p class="project-description">
-              펀딩 달성을 위한 제품 소개 랜딩 페이지입니다. 다크모드/라이트모드
-              테마 전환과 클릭 인터랙션으로 정보 전달력을 높였습니다.
+              접이식 텀블러 아이디어를 바탕으로 직접 기획한 펀딩 랜딩
+              페이지입니다. 기본 인터랙션을 구현한 뒤 AI를 학습과 코드 리뷰
+              도구로 활용해 제품 표현과 사용성을 단계적으로 개선했습니다.
             </p>
+            <div class="project-breakdown">
+              <section class="project-breakdown__group">
+                <p class="project-breakdown__label">DIRECT WORK</p>
+                <h4>직접 기획 및 코어 개발</h4>
+                <ul class="project-breakdown__list">
+                  <li>
+                    <strong>기획 및 화면 구성</strong>
+                    제품 소개부터 펀딩 현황과 상세 정보까지 이어지는 랜딩 페이지
+                    구조를 설계했습니다.
+                  </li>
+                  <li>
+                    <strong>Vanilla JavaScript</strong>
+                    접기·펼치기, 색상 선택, 다크·라이트 테마 전환 기능을
+                    구현했습니다.
+                  </li>
+                  <li>
+                    <strong>SVG 제품 이미지</strong>
+                    화면 크기가 달라져도 선명하게 보이도록 제품 이미지를 직접
+                    제작했습니다.
+                  </li>
+                </ul>
+              </section>
+
+              <section
+                class="project-breakdown__group project-breakdown__group--ai"
+              >
+                <p class="project-breakdown__label">AI-ASSISTED</p>
+                <h4>AI를 활용한 기능 개선</h4>
+                <p class="project-breakdown__intro">
+                  제품의 접이식 구조를 더 직관적으로 전달하고 기존 화면의
+                  반응형·접근성 문제를 점검하기 위해 AI를 라이브러리 학습 및 코드
+                  리뷰 도구로 활용했습니다.
+                </p>
+                <ul class="project-breakdown__list">
+                  <li>
+                    <strong>라이브러리 학습 및 적용</strong>
+                    GSAP·ScrollTrigger를 학습하고 제품 구조와 접히는 과정을
+                    보여주는 스크롤 애니메이션을 적용했습니다.
+                  </li>
+                  <li>
+                    <strong>반응형 및 모바일 사용성</strong>
+                    320px·768px·1440px 화면 구성을 점검하고 모바일 내비게이션을
+                    추가했습니다.
+                  </li>
+                  <li>
+                    <strong>웹 접근성</strong>
+                    키보드 조작과 상태 변화가 스크린리더에 전달되도록 ARIA 속성을
+                    보완하고 모션 감소 설정에 대응했습니다.
+                  </li>
+                  <li>
+                    <strong>애니메이션 안정성</strong>
+                    GSAP·ScrollTrigger가 로드되지 않아도 핵심 콘텐츠와 기본 조작이
+                    유지되도록 대체 동작을 추가했습니다.
+                  </li>
+                </ul>
+              </section>
+            </div>
             <dl class="project-meta">
               <div>
                 <dt>ROLE</dt>
-                <dd>개인 퍼블리싱</dd>
+                <dd>개인 기획 · 코어 개발 · AI 활용 기능 개선</dd>
               </div>
               <div>
                 <dt>TOOLS</dt>
-                <dd>HTML · CSS · JavaScript</dd>
+                <dd>HTML · CSS · JavaScript · SVG · GSAP</dd>
               </div>
               <div>
                 <dt>POINT</dt>
-                <dd>클릭 인터랙션 · 테마 전환</dd>
+                <dd>ScrollTrigger · 반응형 · 웹 접근성</dd>
               </div>
             </dl>
             <a

@@ -436,6 +436,10 @@ button:focus {
   border-top: 2px solid #181715;
 }
 
+.project-card--fold {
+  align-items: start;
+}
+
 .project-visual {
   position: relative;
   overflow: hidden;
@@ -495,6 +499,74 @@ button:focus {
 .project-description {
   margin-top: 30px;
   font-size: 17px;
+}
+
+.project-breakdown {
+  display: grid;
+  margin-top: 34px;
+  gap: 18px;
+}
+
+.project-breakdown__group {
+  padding: 22px;
+  border: 2px solid #181715;
+  background: #fffdf8;
+}
+
+.project-breakdown__group--ai {
+  background: #e8eaff;
+}
+
+.project-breakdown__label {
+  color: #5365ff;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+.project-breakdown__group h4 {
+  margin: 7px 0 0;
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.project-breakdown__intro {
+  margin-top: 14px;
+  color: #4e4b46;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.project-breakdown__list {
+  display: grid;
+  margin-top: 18px;
+  gap: 14px;
+}
+
+.project-breakdown__list li {
+  position: relative;
+  padding-left: 16px;
+  color: #4e4b46;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.project-breakdown__list li::before {
+  position: absolute;
+  top: 0.72em;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background: #5365ff;
+  content: "";
+  transform: translateY(-50%);
+}
+
+.project-breakdown__list strong {
+  display: block;
+  margin-bottom: 2px;
+  color: #181715;
+  font-size: 13px;
 }
 
 .project-meta {
@@ -898,6 +970,14 @@ button:focus {
 
   .project-description {
     font-size: 16px;
+  }
+
+  .project-breakdown__group {
+    padding: 18px;
+  }
+
+  .project-breakdown__group h4 {
+    font-size: 18px;
   }
 
   .project-meta div {
