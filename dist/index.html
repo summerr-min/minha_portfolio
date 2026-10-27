@@ -74,20 +74,20 @@
           <div class="hero-board" aria-label="포트폴리오 프로젝트 목록">
             <p class="board-label">SELECTED WORKS</p>
             <ol class="hero-project-list">
-              <li class="hero-project hero-project--cafe">
-                <span>01</span>
-                <strong>ATELIER MOMENT</strong>
-                <small>BRAND WEBSITE</small>
-              </li>
               <li class="hero-project hero-project--fold">
-                <span>02</span>
+                <span>01</span>
                 <strong>FOLD</strong>
                 <small>FUNDING PAGE</small>
               </li>
               <li class="hero-project hero-project--nonfiction">
-                <span>03</span>
+                <span>02</span>
                 <strong>NONFICTION</strong>
                 <small>UI PUBLISHING</small>
+              </li>
+              <li class="hero-project hero-project--cafe">
+                <span>03</span>
+                <strong>ATELIER MOMENT</strong>
+                <small>BRAND WEBSITE</small>
               </li>
             </ol>
           </div>
@@ -97,22 +97,31 @@
       <section class="about section" id="about" aria-labelledby="about-title">
         <div class="section-heading">
           <p class="section-number">01 / ABOUT</p>
-          <h2 id="about-title">
-            배움에는 끝이 없지만, 결과물에는 책임감을 가집니다.
-          </h2>
+          <h2 id="about-title">결과물에는 책임감을 가집니다.</h2>
         </div>
 
         <div class="about-content">
-          <div class="about-symbol" aria-hidden="true">M</div>
+          <div class="about-symbol">
+            <img
+              src="assets/song-minha-profile.jpg"
+              alt="송민하 프로필 사진"
+              width="200"
+              height="200"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
           <div class="about-copy">
             <p class="about-lead">
-              안녕하세요. 작은 간격 하나, 버튼의 상태 하나까지 사용자의 입장에서
-              살펴보는 신입 웹 퍼블리셔 민하입니다.
+              사용자가 정보를 쉽게 이해하고 편하게 움직일 수 있는 화면을 만드는
+              신입 웹 퍼블리셔 송민하입니다.
             </p>
             <p>
-              HTML로 문서 구조를 만들고 CSS로 화면을 꾸밉니다. JavaScript는
-              메뉴, 탭, 슬라이드처럼 화면에 필요한 동작을 구현할 때 사용합니다.
-              PC와 모바일에서 모두 편하게 볼 수 있도록 확인하며 작업했습니다.
+              HTML로 콘텐츠의 관계가 드러나는 구조를 만들고, CSS의 Grid·Flexbox와
+              미디어 쿼리로 다양한 화면에 대응합니다. JavaScript는 메뉴, 필터,
+              슬라이드, 테마 전환처럼 화면에 꼭 필요한 동작을 구현할 때 사용합니다.
+              보기 좋은 화면에 그치지 않고 시맨틱 마크업, 키보드 포커스, 상태
+              안내까지 함께 살피며 작업합니다.
             </p>
 
             <dl class="about-stats">
@@ -133,56 +142,9 @@
         <div class="section-heading section-heading--work">
           <p class="section-number">02 / SELECTED WORK</p>
           <p>
-            카페, 펀딩 페이지, 쇼핑몰 UI를 주제로 제작했습니다.
+            펀딩 페이지, 쇼핑몰 UI, 카페를 주제로 제작했습니다.
           </p>
         </div>
-
-        <article class="project-card project-card--cafe">
-          <a
-            class="project-visual"
-            href="https://summerr-min.github.io/cafe_portfolio/"
-            target="_blank"
-            rel="noopener"
-            aria-label="ATELIER MOMENT 프로젝트 새 탭에서 보기"
-          >
-            <img
-              src="assets/cafe.png"
-              alt="ATELIER MOMENT 로스터리 카페 웹사이트의 메인 화면"
-            />
-            <span class="visual-index">01</span>
-          </a>
-          <div class="project-info">
-            <p class="project-type">BRAND WEBSITE · RESPONSIVE</p>
-            <h3>ATELIER<br />MOMENT</h3>
-            <p class="project-description">
-              로스터리 카페의 정체성을 살린 반응형 원페이지 사이트입니다.
-              기기별 최적화된 모바일 메뉴와 동적 필터를 안정적으로
-              구현했습니다.
-            </p>
-            <dl class="project-meta">
-              <div>
-                <dt>ROLE</dt>
-                <dd>개인 퍼블리싱</dd>
-              </div>
-              <div>
-                <dt>TOOLS</dt>
-                <dd>HTML · CSS · JavaScript</dd>
-              </div>
-              <div>
-                <dt>POINT</dt>
-                <dd>메뉴 필터 · 모바일 메뉴</dd>
-              </div>
-            </dl>
-            <a
-              class="project-link"
-              href="https://summerr-min.github.io/cafe_portfolio/"
-              target="_blank"
-              rel="noopener"
-            >
-              프로젝트 보기
-            </a>
-          </div>
-        </article>
 
         <article class="project-card project-card--fold">
           <a
@@ -196,35 +158,35 @@
               src="assets/fold.png"
               alt="접히는 실리콘 텀블러 FOLD 펀딩 페이지의 메인 화면"
             />
-            <span class="visual-index">02</span>
+            <span class="visual-index">01</span>
           </a>
           <div class="project-info">
             <p class="project-type">PRODUCT LANDING · INTERACTION</p>
             <h3>FOLD</h3>
             <p class="project-description">
-              접이식 텀블러 아이디어를 바탕으로 직접 기획한 펀딩 랜딩
-              페이지입니다. 기본 인터랙션을 구현한 뒤 AI를 학습과 코드 리뷰
-              도구로 활용해 제품 표현과 사용성을 단계적으로 개선했습니다.
+              가상의 접이식 텀블러를 소개하는 펀딩 랜딩 페이지입니다. 콘텐츠
+              흐름과 SVG 제품 그래픽, 핵심 인터랙션을 직접 설계·구현하고, AI는
+              GSAP 학습과 반응형·접근성 코드 리뷰에 활용했습니다.
             </p>
             <div class="project-breakdown">
               <section class="project-breakdown__group">
-                <p class="project-breakdown__label">DIRECT WORK</p>
-                <h4>직접 기획 및 코어 개발</h4>
+                <p class="project-breakdown__label">PROJECT DIRECTION</p>
+                <h4>직접 정한 기획과 핵심 구조</h4>
                 <ul class="project-breakdown__list">
                   <li>
-                    <strong>기획 및 화면 구성</strong>
-                    제품 소개부터 펀딩 현황과 상세 정보까지 이어지는 랜딩 페이지
-                    구조를 설계했습니다.
+                    <strong>콘텐츠 흐름 및 문서 구조</strong>
+                    제품 특징, 펀딩 현황, 상세 사양, 색상, 브랜드 스토리가 자연스럽게
+                    이어지도록 구성하고 시맨틱 태그와 설명 목록으로 마크업했습니다.
                   </li>
                   <li>
-                    <strong>Vanilla JavaScript</strong>
-                    접기·펼치기, 색상 선택, 다크·라이트 테마 전환 기능을
-                    구현했습니다.
+                    <strong>SVG 및 핵심 인터랙션</strong>
+                    별도 이미지 없이 제품의 펼친 모습과 접힌 모습을 SVG로 제작하고,
+                    접기·펼치기와 색상 선택 상태가 제품 그래픽에 연결되도록 했습니다.
                   </li>
                   <li>
-                    <strong>SVG 제품 이미지</strong>
-                    화면 크기가 달라져도 선명하게 보이도록 제품 이미지를 직접
-                    제작했습니다.
+                    <strong>JavaScript 및 반응형 구성</strong>
+                    테마 전환과 스크롤 진행률을 구현하고 CSS를 역할별로 분리해 여러
+                    화면 크기에 대응했습니다.
                   </li>
                 </ul>
               </section>
@@ -232,12 +194,11 @@
               <section
                 class="project-breakdown__group project-breakdown__group--ai"
               >
-                <p class="project-breakdown__label">AI-ASSISTED</p>
-                <h4>AI를 활용한 기능 개선</h4>
+                <h4>완성도를 위한 AI 기반 코드 검증 및 최적화</h4>
                 <p class="project-breakdown__intro">
-                  제품의 접이식 구조를 더 직관적으로 전달하고 기존 화면의
-                  반응형·접근성 문제를 점검하기 위해 AI를 라이브러리 학습 및 코드
-                  리뷰 도구로 활용했습니다.
+                  기획과 요구사항, 화면의 방향을 직접 정하고 AI를 활용해 코드 구조와
+                  동작을 검증했습니다. 반응형·접근성·라이브러리 예외 상황을 점검하고
+                  프로젝트 목적에 맞게 최적화했습니다.
                 </p>
                 <ul class="project-breakdown__list">
                   <li>
@@ -246,14 +207,14 @@
                     보여주는 스크롤 애니메이션을 적용했습니다.
                   </li>
                   <li>
-                    <strong>반응형 및 모바일 사용성</strong>
-                    320px·768px·1440px 화면 구성을 점검하고 모바일 내비게이션을
-                    추가했습니다.
+                    <strong>반응형 및 조작 방식 보완</strong>
+                    320px·768px·1440px 화면을 점검하고 모바일 내비게이션과 제품 상세
+                    단계 선택 버튼을 추가했습니다.
                   </li>
                   <li>
                     <strong>웹 접근성</strong>
-                    키보드 조작과 상태 변화가 스크린리더에 전달되도록 ARIA 속성을
-                    보완하고 모션 감소 설정에 대응했습니다.
+                    키보드 포커스와 ARIA 상태값을 보완하고, 색상·접힘·펀딩 상태가
+                    스크린리더에 전달되도록 했으며 모션 감소 설정에 대응했습니다.
                   </li>
                   <li>
                     <strong>애니메이션 안정성</strong>
@@ -266,7 +227,7 @@
             <dl class="project-meta">
               <div>
                 <dt>ROLE</dt>
-                <dd>개인 기획 · 코어 개발 · AI 활용 기능 개선</dd>
+                <dd>개인 기획 · 핵심 구조 설계 · AI 기반 검증</dd>
               </div>
               <div>
                 <dt>TOOLS</dt>
@@ -300,15 +261,101 @@
               src="assets/nonfiction.png"
               alt="NONFICTION 쇼핑몰 UI 퍼블리싱 프로젝트의 메인 화면"
             />
-            <span class="visual-index">03</span>
+            <span class="visual-index">02</span>
           </a>
           <div class="project-info">
             <p class="project-type">CLONE CODING · RESPONSIVE</p>
             <h3>NONFICTION<br />UI</h3>
             <p class="project-description">
-              기존 이커머스 사이트의 구조와 주요 기능을 분석해 구현한 반응형
-              클론 프로젝트입니다. 사용자가 상품을 탐색하는 데 필요한 주요
-              UI를 충실히 구현했습니다.
+              논픽션 공식 사이트의 메인 화면을 분석해 시작한 비상업적 클론 코딩
+              프로젝트입니다. 상품 상세 페이지와 옵션·수량 선택, 메인·상세 공통
+              장바구니를 추가해 상품 탐색부터 담기까지의 흐름을 확장했습니다.
+            </p>
+            <div class="project-breakdown">
+              <section
+                class="project-breakdown__group project-breakdown__group--ai"
+              >
+                <h4>메인·상품 상세·장바구니 구현 및 AI 기반 최적화</h4>
+                <p class="project-breakdown__intro">
+                  공식 사이트를 분석해 구현 목표와 화면 흐름을 정하고, AI를 활용해
+                  메인·상품 상세·공통 장바구니의 코드 구조와 기능 연결을 검증했습니다.
+                  반응형·접근성과 상태 관리 로직을 점검해 완성도를 높였습니다.
+                </p>
+                <ul class="project-breakdown__list">
+                  <li>
+                    <strong>이커머스 메인 UI</strong>
+                    고정 헤더와 이미지 메가 메뉴, Swiper 슬라이드, 상품 호버 효과,
+                    PC 4열·태블릿 3열·모바일 2열 상품 그리드를 구현했습니다.
+                  </li>
+                  <li>
+                    <strong>데이터 기반 상품 상세</strong>
+                    6개 상품 정보를 JavaScript 데이터로 관리하고 하나의 상세 페이지에
+                    상품별 옵션, 향 노트, 스토리, 추천 상품을 연결했습니다.
+                  </li>
+                  <li>
+                    <strong>옵션·수량 및 가격 처리</strong>
+                    옵션과 수량 선택에 따라 가격이 바뀌도록 구현하고 모바일 하단 구매
+                    버튼으로 주요 동작에 쉽게 접근할 수 있게 했습니다.
+                  </li>
+                  <li>
+                    <strong>메인·상세 공통 장바구니</strong>
+                    localStorage를 활용해 페이지를 이동하거나 새로고침해도 상품이
+                    유지되도록 하고 수량 변경, 삭제, 합계 계산을 구현했습니다.
+                  </li>
+                  <li>
+                    <strong>반응형 및 접근성</strong>
+                    모바일 메뉴와 키보드 포커스를 보완하고 장바구니와 선택 상태에
+                    필요한 ARIA 정보를 적용했습니다.
+                  </li>
+                </ul>
+              </section>
+            </div>
+            <dl class="project-meta">
+              <div>
+                <dt>ROLE</dt>
+                <dd>개인 클론코딩 · AI 기반 검증 및 최적화</dd>
+              </div>
+              <div>
+                <dt>TOOLS</dt>
+                <dd>HTML · CSS · JavaScript · Swiper</dd>
+              </div>
+              <div>
+                <dt>POINT</dt>
+                <dd>상품 상세 · 옵션/수량 · 공통 장바구니</dd>
+              </div>
+            </dl>
+            <a
+              class="project-link"
+              href="https://summerr-min.github.io/nonfiction_portfolio/"
+              target="_blank"
+              rel="noopener"
+            >
+              프로젝트 보기
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card project-card--cafe">
+          <a
+            class="project-visual"
+            href="https://summerr-min.github.io/cafe_portfolio/"
+            target="_blank"
+            rel="noopener"
+            aria-label="ATELIER MOMENT 프로젝트 새 탭에서 보기"
+          >
+            <img
+              src="assets/cafe.png"
+              alt="ATELIER MOMENT 로스터리 카페 웹사이트의 메인 화면"
+            />
+            <span class="visual-index">03</span>
+          </a>
+          <div class="project-info">
+            <p class="project-type">BRAND WEBSITE · RESPONSIVE</p>
+            <h3>ATELIER<br />MOMENT</h3>
+            <p class="project-description">
+              로스터리 카페의 정체성을 살린 반응형 원페이지 사이트입니다.
+              기기별 최적화된 모바일 메뉴와 동적 필터를 안정적으로
+              구현했습니다.
             </p>
             <dl class="project-meta">
               <div>
@@ -321,12 +368,12 @@
               </div>
               <div>
                 <dt>POINT</dt>
-                <dd>메가 메뉴 · 상품 슬라이더</dd>
+                <dd>메뉴 필터 · 모바일 메뉴</dd>
               </div>
             </dl>
             <a
               class="project-link"
-              href="https://summerr-min.github.io/nonfiction_portfolio/"
+              href="https://summerr-min.github.io/cafe_portfolio/"
               target="_blank"
               rel="noopener"
             >
