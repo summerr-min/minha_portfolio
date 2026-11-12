@@ -161,7 +161,7 @@
         <div class="section-heading section-heading--work">
           <p class="section-number">02 / SELECTED WORK</p>
           <p>
-            생성형 AI 상품 페이지, 펀딩 페이지, 쇼핑몰 UI, 카페 웹사이트를
+            ComfyUI 이미지 활용 페이지, 펀딩 페이지, 쇼핑몰 UI, 카페 웹사이트를
             제작했습니다.
           </p>
         </div>
@@ -179,7 +179,7 @@
           >
             <img
               src="assets/comfyui.png"
-              alt="ComfyUI 결과물을 웹 기능으로 연결한 의류 상품 페이지의 메인 화면"
+              alt="ComfyUI 결과물을 웹 기능으로 연결한 상품 페이지의 메인 화면"
               width="1440"
               height="900"
               loading="lazy"
@@ -191,10 +191,10 @@
             <p class="project-type">GENERATIVE AI · WEB INTERACTION</p>
             <h3>COMFYUI ×<br />FITLUNA</h3>
             <p class="project-description">
-              채팅형 AI로 상품 이미지를 수정할 때 포즈·의상·글자가 함께 바뀌고,
-              요청마다 사용량이 차감되는 문제를 줄이기 위해 로컬 ComfyUI 작업
-              과정을 실험했습니다. 설정값만 바꿔 같은 조건으로 다시 실행하고,
-              마스크와 앞뒤 영역 정보를 웹 인터랙션으로 연결했습니다.
+              채팅형 AI로 상품 이미지를 수정할 때 포즈·상품 형태·글자가 함께
+              바뀌고, 요청마다 사용량이 차감되는 문제를 줄이기 위해 로컬
+              ComfyUI 작업 과정을 실험했습니다. 설정값만 바꿔 같은 조건으로 다시
+              실행하고, 마스크와 앞뒤 영역 정보를 웹 인터랙션으로 연결했습니다.
             </p>
             <div class="project-breakdown">
               <section class="project-breakdown__group">
@@ -203,7 +203,7 @@
                 <ul class="project-breakdown__list">
                   <li>
                     <strong>반복 수정의 일관성</strong>
-                    색상만 바꾸려 해도 포즈와 의상이 달라지고, 선명하게 만드는
+                    색상만 바꾸려 해도 포즈와 상품 형태가 달라지고, 선명하게 만드는
                     과정에서 상품 글자가 바뀌는 사례를 비교했습니다.
                   </li>
                   <li>
@@ -230,7 +230,7 @@
                 <ul class="project-breakdown__list">
                   <li>
                     <strong>이미지 영역 분리</strong>
-                    의류 마스크와 사진의 앞뒤 영역 정보를 만들어 효과를 적용할 위치를
+                    옷 영역 마스크와 사진의 앞뒤 영역 정보를 만들어 효과를 적용할 위치를
                     구분했습니다.
                   </li>
                   <li>
@@ -241,7 +241,10 @@
                   <li>
                     <strong>AI 활용 범위</strong>
                     Gemini는 초기 이미지 제작, ComfyUI는 이미지 처리에 사용하고,
-                    대화형 AI는 자동 미리보기 로직과 코드 정리·검토에 활용했습니다.
+                    대화형 AI는 입체 배너의 움직임, SVG 마스크·필터, 자동 미리보기와
+                    사이즈 비교 JavaScript처럼 신입 단계에서 익숙하지 않은 구현을
+                    학습·보완하고, 코드 정리와 반응형·접근성을 검토하는 데
+                    활용했습니다.
                   </li>
                 </ul>
               </section>
@@ -319,11 +322,10 @@
               <section
                 class="project-breakdown__group project-breakdown__group--ai"
               >
-                <h4>완성도를 위한 AI 기반 코드 검증 및 최적화</h4>
+                <h4>AI로 학습하고 점검한 부분</h4>
                 <p class="project-breakdown__intro">
-                  기획과 요구사항, 화면의 방향을 직접 정하고 AI를 활용해 코드 구조와
-                  동작을 검증했습니다. 반응형·접근성·라이브러리 예외 상황을 점검하고
-                  프로젝트 목적에 맞게 최적화했습니다.
+                  GSAP 사용법을 학습하고, 320px·768px·1440px 화면과 키보드 조작,
+                  라이브러리가 로드되지 않는 상황을 AI와 함께 점검했습니다.
                 </p>
                 <ul class="project-breakdown__list">
                   <li>
@@ -352,7 +354,7 @@
             <dl class="project-meta">
               <div>
                 <dt>ROLE</dt>
-                <dd>개인 기획 · 핵심 구조 설계 · AI 기반 검증</dd>
+                <dd>개인 기획 · 핵심 구조 설계 · AI 코드 점검</dd>
               </div>
               <div>
                 <dt>TOOLS</dt>
@@ -403,11 +405,11 @@
               <section
                 class="project-breakdown__group project-breakdown__group--ai"
               >
-                <h4>메인·상품 상세·장바구니 구현 및 AI 기반 최적화</h4>
+                <h4>구현 과정에서 AI로 점검한 부분</h4>
                 <p class="project-breakdown__intro">
-                  공식 사이트를 분석해 구현 목표와 화면 흐름을 정하고, AI를 활용해
-                  메인·상품 상세·공통 장바구니의 코드 구조와 기능 연결을 검증했습니다.
-                  반응형·접근성과 상태 관리 로직을 점검해 완성도를 높였습니다.
+                  공식 사이트를 분석해 구현 범위와 화면 흐름을 정했습니다. AI는 상품
+                  데이터 구조, 장바구니 상태 처리, 모바일 메뉴와 키보드 포커스를
+                  점검할 때 활용했습니다.
                 </p>
                 <ul class="project-breakdown__list">
                   <li>
@@ -441,7 +443,7 @@
             <dl class="project-meta">
               <div>
                 <dt>ROLE</dt>
-                <dd>개인 클론코딩 · AI 기반 검증 및 최적화</dd>
+                <dd>개인 클론코딩 · AI 코드 점검</dd>
               </div>
               <div>
                 <dt>TOOLS</dt>
@@ -482,7 +484,7 @@
             <h3>ATELIER<br />MOMENT</h3>
             <p class="project-description">
               로스터리 카페의 정체성을 살린 반응형 원페이지 사이트입니다.
-              기기별 최적화된 모바일 메뉴와 동적 필터를 안정적으로
+              PC·태블릿·모바일 화면에 맞춘 메뉴와 카테고리 필터를
               구현했습니다.
             </p>
             <dl class="project-meta">
@@ -525,19 +527,19 @@
           <article>
             <span>01</span>
             <h3>HTML</h3>
-            <p>콘텐츠를 가장 잘 설명할 수 있는 의미 있는 태그를 고민합니다.</p>
+            <p>제목, 목록, 버튼 등 콘텐츠의 관계가 드러나는 태그를 사용합니다.</p>
           </article>
           <article>
             <span>02</span>
             <h3>CSS</h3>
             <p>
-              기기의 경계를 넘어 일관된 퀄리티를 보여주는 스타일을 작성합니다.
+              Grid·Flexbox와 미디어 쿼리로 PC와 모바일 화면을 구성합니다.
             </p>
           </article>
           <article>
             <span>03</span>
             <h3>JavaScript</h3>
-            <p>정적인 화면에 생명력을 불어넣는 필수 동작들을 구현합니다.</p>
+            <p>메뉴, 필터, 슬라이드처럼 조작에 필요한 동작을 구현합니다.</p>
           </article>
         </div>
       </section>

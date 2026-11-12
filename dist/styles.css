@@ -189,10 +189,12 @@ button:focus {
 
 .hero h1 {
   max-width: 760px;
+  min-width: 0;
   font-size: 68px;
   font-weight: 900;
   letter-spacing: -4px;
   line-height: 1;
+  overflow-wrap: anywhere;
 }
 
 .hero h1 em {
@@ -322,10 +324,12 @@ button:focus {
 
 .section-heading h2 {
   max-width: 900px;
+  min-width: 0;
   font-size: 72px;
   font-weight: 900;
   letter-spacing: -5px;
   line-height: 1;
+  overflow-wrap: anywhere;
 }
 
 .about {
@@ -509,10 +513,12 @@ button:focus {
 }
 
 .project-info h3 {
+  min-width: 0;
   font-size: 70px;
   font-weight: 900;
   letter-spacing: -5px;
   line-height: 0.95;
+  overflow-wrap: anywhere;
 }
 
 .project-description {

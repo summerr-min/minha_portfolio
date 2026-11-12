@@ -1,4 +1,4 @@
-// 모바일 메뉴에 필요한 요소 가져옴
+// 모바일 메뉴 요소
 const menuButton = document.querySelector(".menu-toggle");
 const menu = document.querySelector(".site-nav");
 const menuLinks = document.querySelectorAll(".site-nav a");
@@ -32,13 +32,14 @@ function closeMenuWithEscape(event) {
     closeMenu();
   }
 }
+
 function closeMenuOnDesktop() {
   if (window.innerWidth > 860) {
     closeMenu();
   }
 }
 
-// 버튼, 키보드, 화면 크기 변경에 필요한 동작 연결
+// 버튼, 키보드, 화면 크기 변경 이벤트
 menuButton.addEventListener("click", toggleMenu);
 document.addEventListener("keydown", closeMenuWithEscape);
 window.addEventListener("resize", closeMenuOnDesktop);
