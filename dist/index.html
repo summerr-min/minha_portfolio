@@ -62,8 +62,8 @@
               화면의 <em>이유</em>를 먼저 묻습니다.
             </h1>
             <p class="hero-description">
-              HTML, CSS, JavaScript로 제작한 세 가지 반응형 웹 프로젝트를
-              소개합니다.
+              HTML, CSS, JavaScript와 생성형 AI 도구를 활용해 제작한 네 가지
+              웹 프로젝트를 소개합니다.
             </p>
             <div class="hero-actions">
               <a class="button button--dark" href="#work">작업 둘러보기</a>
@@ -74,20 +74,39 @@
           <div class="hero-board" aria-label="포트폴리오 프로젝트 목록">
             <p class="board-label">SELECTED WORKS</p>
             <ol class="hero-project-list">
-              <li class="hero-project hero-project--fold">
-                <span>01</span>
-                <strong>FOLD</strong>
-                <small>FUNDING PAGE</small>
+              <li>
+                <a
+                  class="hero-project hero-project--comfy"
+                  href="#project-comfy"
+                >
+                  <span>01</span>
+                  <strong>COMFYUI × FITLUNA</strong>
+                  <small>AI IMAGE · WEB INTERACTION</small>
+                </a>
               </li>
-              <li class="hero-project hero-project--nonfiction">
-                <span>02</span>
-                <strong>NONFICTION</strong>
-                <small>UI PUBLISHING</small>
+              <li>
+                <a class="hero-project hero-project--fold" href="#project-fold">
+                  <span>02</span>
+                  <strong>FOLD</strong>
+                  <small>FUNDING PAGE</small>
+                </a>
               </li>
-              <li class="hero-project hero-project--cafe">
-                <span>03</span>
-                <strong>ATELIER MOMENT</strong>
-                <small>BRAND WEBSITE</small>
+              <li>
+                <a
+                  class="hero-project hero-project--nonfiction"
+                  href="#project-nonfiction"
+                >
+                  <span>03</span>
+                  <strong>NONFICTION</strong>
+                  <small>UI PUBLISHING</small>
+                </a>
+              </li>
+              <li>
+                <a class="hero-project hero-project--cafe" href="#project-cafe">
+                  <span>04</span>
+                  <strong>ATELIER MOMENT</strong>
+                  <small>BRAND WEBSITE</small>
+                </a>
               </li>
             </ol>
           </div>
@@ -127,7 +146,7 @@
             <dl class="about-stats">
               <div>
                 <dt>PROJECTS</dt>
-                <dd>03</dd>
+                <dd>04</dd>
               </div>
               <div>
                 <dt>BASE</dt>
@@ -142,11 +161,117 @@
         <div class="section-heading section-heading--work">
           <p class="section-number">02 / SELECTED WORK</p>
           <p>
-            펀딩 페이지, 쇼핑몰 UI, 카페를 주제로 제작했습니다.
+            생성형 AI 상품 페이지, 펀딩 페이지, 쇼핑몰 UI, 카페 웹사이트를
+            제작했습니다.
           </p>
         </div>
 
-        <article class="project-card project-card--fold">
+        <article
+          class="project-card project-card--comfy"
+          id="project-comfy"
+        >
+          <a
+            class="project-visual"
+            href="https://summerr-min.github.io/comfyui_product_page/"
+            target="_blank"
+            rel="noopener"
+            aria-label="COMFYUI × FITLUNA 프로젝트 새 탭에서 보기"
+          >
+            <img
+              src="assets/comfyui.png"
+              alt="ComfyUI 결과물을 웹 기능으로 연결한 의류 상품 페이지의 메인 화면"
+              width="1440"
+              height="900"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="visual-index">01</span>
+          </a>
+          <div class="project-info">
+            <p class="project-type">GENERATIVE AI · WEB INTERACTION</p>
+            <h3>COMFYUI ×<br />FITLUNA</h3>
+            <p class="project-description">
+              채팅형 AI로 상품 이미지를 수정할 때 포즈·의상·글자가 함께 바뀌고,
+              요청마다 사용량이 차감되는 문제를 줄이기 위해 로컬 ComfyUI 작업
+              과정을 실험했습니다. 설정값만 바꿔 같은 조건으로 다시 실행하고,
+              마스크와 앞뒤 영역 정보를 웹 인터랙션으로 연결했습니다.
+            </p>
+            <div class="project-breakdown">
+              <section class="project-breakdown__group">
+                <p class="project-breakdown__label">PROJECT DIRECTION</p>
+                <h4>채팅형 AI에서 확인한 문제를 작업 기준으로 정리</h4>
+                <ul class="project-breakdown__list">
+                  <li>
+                    <strong>반복 수정의 일관성</strong>
+                    색상만 바꾸려 해도 포즈와 의상이 달라지고, 선명하게 만드는
+                    과정에서 상품 글자가 바뀌는 사례를 비교했습니다.
+                  </li>
+                  <li>
+                    <strong>로컬 반복 실행</strong>
+                    요청 단위의 유료 사용량 차감 없이 이미지와 설정값을 바꿔 같은
+                    작업을 다시 실행하고, 사용한 조건을 기록했습니다.
+                  </li>
+                  <li>
+                    <strong>도구의 한계 구분</strong>
+                    ComfyUI도 뭉개진 글자를 정확히 복원하지 못해, 글자는 이미지에
+                    맡기지 않고 HTML로 처리했습니다.
+                  </li>
+                </ul>
+              </section>
+
+              <section
+                class="project-breakdown__group project-breakdown__group--ai"
+              >
+                <h4>ComfyUI 결과물을 실제 웹 기능으로 연결</h4>
+                <p class="project-breakdown__intro">
+                  무료 공개 템플릿에 이미지와 설정값을 적용해 필요한 결과물을 만들고,
+                  SVG·CSS·JavaScript로 상품 페이지 기능에 연결했습니다.
+                </p>
+                <ul class="project-breakdown__list">
+                  <li>
+                    <strong>이미지 영역 분리</strong>
+                    의류 마스크와 사진의 앞뒤 영역 정보를 만들어 효과를 적용할 위치를
+                    구분했습니다.
+                  </li>
+                  <li>
+                    <strong>상품 페이지 인터랙션</strong>
+                    입체 배너, 컬러 옵션, 상품 이미지 전환, 라인아트 사이즈 비교
+                    기능을 구현했습니다.
+                  </li>
+                  <li>
+                    <strong>AI 활용 범위</strong>
+                    Gemini는 초기 이미지 제작, ComfyUI는 이미지 처리에 사용하고,
+                    대화형 AI는 자동 미리보기 로직과 코드 정리·검토에 활용했습니다.
+                  </li>
+                </ul>
+              </section>
+            </div>
+            <dl class="project-meta">
+              <div>
+                <dt>ROLE</dt>
+                <dd>개인 실험 · ComfyUI 적용 · 웹 인터랙션 구현</dd>
+              </div>
+              <div>
+                <dt>TOOLS</dt>
+                <dd>ComfyUI · HTML · CSS · JavaScript · SVG</dd>
+              </div>
+              <div>
+                <dt>POINT</dt>
+                <dd>반복 실행 · 마스크/앞뒤 영역 · 상품 UI</dd>
+              </div>
+            </dl>
+            <a
+              class="project-link"
+              href="https://summerr-min.github.io/comfyui_product_page/"
+              target="_blank"
+              rel="noopener"
+            >
+              프로젝트 보기
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card project-card--fold" id="project-fold">
           <a
             class="project-visual"
             href="https://summerr-min.github.io/fold_funding/"
@@ -158,7 +283,7 @@
               src="assets/fold.png"
               alt="접히는 실리콘 텀블러 FOLD 펀딩 페이지의 메인 화면"
             />
-            <span class="visual-index">01</span>
+            <span class="visual-index">02</span>
           </a>
           <div class="project-info">
             <p class="project-type">PRODUCT LANDING · INTERACTION</p>
@@ -249,7 +374,10 @@
           </div>
         </article>
 
-        <article class="project-card project-card--nonfiction">
+        <article
+          class="project-card project-card--nonfiction"
+          id="project-nonfiction"
+        >
           <a
             class="project-visual"
             href="https://summerr-min.github.io/nonfiction_portfolio/"
@@ -261,7 +389,7 @@
               src="assets/nonfiction.png"
               alt="NONFICTION 쇼핑몰 UI 퍼블리싱 프로젝트의 메인 화면"
             />
-            <span class="visual-index">02</span>
+            <span class="visual-index">03</span>
           </a>
           <div class="project-info">
             <p class="project-type">CLONE CODING · RESPONSIVE</p>
@@ -335,7 +463,7 @@
           </div>
         </article>
 
-        <article class="project-card project-card--cafe">
+        <article class="project-card project-card--cafe" id="project-cafe">
           <a
             class="project-visual"
             href="https://summerr-min.github.io/cafe_portfolio/"
@@ -347,7 +475,7 @@
               src="assets/cafe.png"
               alt="ATELIER MOMENT 로스터리 카페 웹사이트의 메인 화면"
             />
-            <span class="visual-index">03</span>
+            <span class="visual-index">04</span>
           </a>
           <div class="project-info">
             <p class="project-type">BRAND WEBSITE · RESPONSIVE</p>

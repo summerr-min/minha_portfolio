@@ -268,6 +268,11 @@ button:focus {
   align-items: center;
 }
 
+.hero-project--comfy {
+  background: #5365ff;
+  color: #fffdf8;
+}
+
 .hero-project--fold {
   background: #c9ff57;
 }
@@ -282,8 +287,10 @@ button:focus {
 }
 
 .hero-project-list strong {
+  min-width: 0;
   font-size: 24px;
   line-height: 1.1;
+  overflow-wrap: anywhere;
 }
 
 .hero-project-list small {
@@ -429,6 +436,7 @@ button:focus {
   display: grid;
   padding: 110px 0;
   border-bottom: 2px solid #181715;
+  scroll-margin-top: 96px;
   grid-template-columns: 3fr 2fr;
   gap: 80px;
   align-items: center;
@@ -443,6 +451,10 @@ button:focus {
   align-items: start;
 }
 
+.project-card--comfy {
+  align-items: start;
+}
+
 .project-visual {
   position: relative;
   overflow: hidden;
@@ -453,6 +465,10 @@ button:focus {
 
 .project-card--fold .project-visual {
   background: #5365ff;
+}
+
+.project-card--comfy .project-visual {
+  background: #181715;
 }
 
 .project-card--nonfiction .project-visual {
@@ -813,8 +829,13 @@ button:focus {
 
   .hero-grid {
     width: 92%;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 60px;
+  }
+
+  .hero-copy,
+  .project-info {
+    min-width: 0;
   }
 
   .section {
@@ -851,7 +872,7 @@ button:focus {
   }
 
   .project-card {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .project-visual img {
@@ -969,6 +990,11 @@ button:focus {
   .project-info h3 {
     font-size: 48px;
     letter-spacing: -3px;
+  }
+
+  .project-card--comfy .project-info h3 {
+    font-size: 42px;
+    letter-spacing: -2px;
   }
 
   .project-description {
